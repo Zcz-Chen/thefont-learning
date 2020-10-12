@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="demo">我的第一个JavaScript</h1>
+    <button type="button" onclick="displayDate()">点击显示日期</button>
+    <br>
+    <img src="./images/pic_bulboff.gif" id="myimage" onclick="changeImage()" alt="">
+    <p>点击灯泡就可以打开或关闭</p>
+
+
+    <script>
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+
+        function changeImage() {
+            let element = document.getElementById("myimage");
+            if (element.src.match("bulbon")) {
+                element.src = "./images/pic_bulboff.gif";
+            } else {
+                element.src = "./images/focus1.png";
+            }
+        }
+
+        //三元表达式
+        var num = 10;
+        var result = num > 5 ? "是的" : "不是的"; //表达式是有返回值的
+        console.log(result);
+
+        //数字补0 案列
+        var time = prompt("请输入一个0~59之间的数");
+        var num = time < 10 ? "0" + time : time;
+        alert(num);
+
+
+        // switch 分支案列
+        var shuiguo = prompt("请输入你要查寻的水果");
+        switch (shuiguo) {
+            case "苹果":
+                alert("3.5/元斤")
+                break;
+            case "香蕉":
+                alert("2/元斤")
+                break;
+        
+            default:
+            alert("没有此水果");
+                break;
+        }
+    </script>
+
+</body>
+
+</html>
