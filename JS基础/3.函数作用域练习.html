@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var a =123;
+        function fun(){
+            alert(a);
+        }
+        fun();//输出的是 123
+
+        var a = 123;
+        function fun2(){
+            alert(a);
+            var a =456;
+        }
+        fun2(); // 输出 undefined
+        alert(a); // 输出 123
+
+        var a =123;
+        function fun3(){
+            alert(a);
+            a = 456;
+        }
+        fun3(); //输出 123
+
+        var a =123;
+        function fun4(a){
+            alert(a);
+            a = 456;
+        }
+        fun(123); //输出 123；
+        alert(a); //输出 123
+
+    </script>
+    
+</body>
+</html>
